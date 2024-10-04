@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"
+    ></script>
+    <title>Contact me</title>
+  </head>
+
+  <body class="wallpaper">
+    <div class="div">
+      <div class="align">
+        <h2 class="btn">Contact me</h2>
+      </div>
+      <br>
+      <form action="main.php" method="post" class="form_control"
+      enctype="multipart/form-data"
+      onsubmit="return validateForm()"
+      onreset="resetevent()" >
+
+        <p id="new">Enter Your Name :</p>
+        <input type="text" id="Name" name="Name"  
+        onfocus="onfocus1(this)" 
+        onblur="blurevent(this)" 
+        onselect="selectevent()"/>
+        <br />
+
+        <p id="new">Enter Your USN :</p>
+        <input type="text" name="USN" id="usn"  onfocus="onfocus1(this)"  onblur="blurevent(this)"/>
+        <br />
+
+        <p id="new">Choose Branch :</p>
+        <select name="Branch" id="branch" onfocus="onfocus1(this)"  onblur="blurevent(this)" onchange="changevent()"  >
+          <option value="CSE">CSE</option>
+          <option value="ISE">ISE</option>
+          <option value="AIML">AIML</option>
+          <option value="CIVIL">CIVIL</option>
+          <option value="ECE">ECE</option>
+          <option value="MECH">MECH</option>
+          <option value="EEE">EEE</option>
+        </select>
+
+        <p id="demo"></p>
+        <br />
+
+        <label for="Gender" class="paragraph"">Gender :</label>
+        <input type="radio" id="male" name="Gender" value="Male"  />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender" value="female" />
+        <label for="female">Female</label>
+        <br>
+
+        <p id="new">Enter Your Email :</p>
+        <input type="email" name="Email" id="email"  onfocus="onfocus1(this)"  />
+        <br />
+
+        <p id="new">Enter Your Mobile :</p>
+        <input type="tel" name="Mobile" id="mobile" onfocus="onfocus1(this)"  onblur="blurevent(this)" />
+        <br>
+        <br/>
+        <label for="terms">Accept Terms & Conditions :</label>
+        <input type="checkbox" id="terms">
+        <br>
+        <br>
+        <input type="submit" class="btn" name="submit">
+        <input type="reset" class="btn">
+        <br>
+        <br>
+       
+        <br>
+      </form>
+    </div>
+  </body>
+</html>
